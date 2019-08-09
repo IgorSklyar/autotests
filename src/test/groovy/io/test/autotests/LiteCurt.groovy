@@ -13,7 +13,6 @@ import org.openqa.selenium.By
 class LiteCurt {
 
     @Test
-
     void CheckConutry () {
 
         Selenide.open('http://litecart.stqa.ru/en/')
@@ -31,12 +30,7 @@ class LiteCurt {
         def CheckState =$(By.xpath('//option[contains(text(),\'Florida\')]'))
         CheckState.click()
 
-
-
     }
 
 
-
-
-    //select[@name='country_code']
 }

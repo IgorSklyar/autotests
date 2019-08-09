@@ -1,43 +1,31 @@
 package io.test.autotests
 
-import com.codeborne.selenide.Selenide
 import org.junit.Test
-import org.openqa.selenium.By
-
-import static com.codeborne.selenide.Selenide.*
-import static com.codeborne.selenide.Condition.*
-
-
-
 import com.codeborne.selenide.CollectionCondition
 import com.codeborne.selenide.Selenide
 import org.openqa.selenium.By
-
-
-import static com.codeborne.selenide.Selenide.$
 import static com.codeborne.selenide.Selenide.$$
+import static com.codeborne.selenide.Selenide.$
+
 
 class LessonThree {
 
     @Test
-
-    void SchedullerTest() {
+    void SchedulerTest() {
 
         Selenide.open('https://rasp.yandex.ru/search')
-        def Fromfield = $("#from")
-        def ToField = $('#to')
-        def WhenField = $('#when')
+        def fromField = $("#from")
+        def toField = $('#to')
+        def whenField = $('#when')
         def findButton = $('button.SearchForm__submit')
 
-        Fromfield.value = "Великий Новгород"
-        ToField.value = "Москва"
-        WhenField.value = 'сегодня'
+        fromField.value = "Великий Новгород"
+        toField.value = "Москва"
+        whenField.value = 'сегодня'
         findButton.click()
 
-
-        def foundRecords = $$("article.SearchSegment_isVisible")
-
-        foundRecords.shouldBe(CollectionCondition.sizeGreaterThan(1))
+        def foundRecords = $$(".SearchMetaSegment > .SearchSegment_isVisible")
+        foundRecords.shouldBe(CollectionCondition.sizeGreaterThan(0), 60000)
 
         foundRecords.each {
             def recordName = it.$(By.className("SegmentTitle__header"))

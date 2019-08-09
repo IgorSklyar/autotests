@@ -59,60 +59,59 @@ class CustomerData extends ElementsContainer {
 
 
 
-    public void setTaxID(String TaxIdField) {
+     void setTaxID(String TaxIdField) {
         this.TaxIdField.setValue(TaxIdField)
     }
 
 
 
-   public void setFirstName (String FirstNameField){
+    void setFirstName (String FirstNameField){
        this.FirstNameField.setValue(FirstNameField)
    }
 
 
-    public  void setLastNameField (String LastNameField){
+      void setLastNameField (String LastNameField){
 
         this.LastNameField.setValue(LastNameField)
     }
 
 
-   public void  setCompanyField (String CompanyField) {
+    void  setCompanyField (String CompanyField) {
        this.CompanyField.setValue(CompanyField)
    }
 
 
-   public void  setAddressField1(String  AddressField1){
+   void  setAddressField1(String  AddressField1){
 
        this.AddressField1.setValue( AddressField1)
    }
 
-    public  void setAddressField2(String AddressField2){
+      void setAddressField2(String AddressField2){
         this.AddressField2.setValue(AddressField2)
     }
 
 
-    public void setPostCodeField(String PostCodeField){
+     void setPostCodeField(String PostCodeField){
         this.PostCodeField.setValue(PostCodeField)
     }
 
-    public void setCityField(String CityField){
+     void setCityField(String CityField){
         this.CityField.setValue(CityField)
     }
 
-    public  void setEmailField (String EmailField){
+      void setEmailField (String EmailField){
         this.EmailField.setValue(EmailField)
     }
-    public  void setPhoneField(String PhoneField){
+     void setPhoneField(String PhoneField){
         this.PhoneField.setValue(PhoneField)
     }
 
 
 
-    public SelenideElement getSubmitButton() {
+     SelenideElement getSubmitButton() {
         return getSubmitButton
 
     }
-
 
 
 }

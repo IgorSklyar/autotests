@@ -7,10 +7,13 @@ class MainPage {
 
     String pageUrl = ('http://litecart.stqa.ru/en/')
 
-    public MainPage open() {
-
-        Selenide.open(pageUrl)
-        return this
+    static getMainPAgeUrl (){
 
     }
-}
+//     MainPage open() {
+//
+//        Selenide.open(pageUrl)
+//        return this
+
+    }
+

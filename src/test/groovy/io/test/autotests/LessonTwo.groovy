@@ -8,7 +8,7 @@ import static com.codeborne.selenide.Condition.*
 
 class LessonTwo {
     @Test
-    public void debugTest() {
+    void debugTest() {
 
         def searchRequest = "Cat"
         open("https://google.com/")
@@ -17,7 +17,10 @@ class LessonTwo {
         searchInput.pressEnter()
 
         def found = $$("#ires .g")
+        found.shouldBe()
         assert found.size() > 0
         assert found.first().text.contains(searchRequest)
+
+        println("END")
     }
 }
