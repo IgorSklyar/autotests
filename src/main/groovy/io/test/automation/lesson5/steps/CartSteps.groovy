@@ -11,9 +11,6 @@ class CartSteps {
         ButtonAddToCartElements.addToCartButton.click()
     }
 
-//    static checkTotalPrice(String desiredPrice){
-//
-//}
 
     static String getUnitCost () {
         CartPage.getUnitCostElement().getText()
@@ -29,7 +26,7 @@ class CartSteps {
     }
 
     static void goToCart() {
-        CartSteps.checkCartItemsCount('1')
+        checkCartItemsCount('1')
         CartPage.cartItemsCounter.click()
     }
 }
