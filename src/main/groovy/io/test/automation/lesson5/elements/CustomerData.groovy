@@ -3,8 +3,10 @@ package io.test.automation.lesson5.elements
 
 import com.codeborne.selenide.ElementsContainer
 import com.codeborne.selenide.SelenideElement
+import org.openqa.selenium.By
 import org.openqa.selenium.support.FindBy
 
+import static com.codeborne.selenide.Selenide.$
 
 
 class CustomerData extends ElementsContainer {
@@ -107,11 +109,13 @@ class CustomerData extends ElementsContainer {
     }
 
 
-
-     SelenideElement getSubmitButton() {
-        return getSubmitButton
-
+    static getSubmitButton(){
+        $(By.xpath('//button[@name=\'confirm_order\']'))
     }
+//      SelenideElement getSubmitButton() {
+//        return getSubmitButton
+//
+//    }
 
 
 }
