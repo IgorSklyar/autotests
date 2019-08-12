@@ -10,7 +10,9 @@ class OrderSuccessfulSteps {
 
    static void CheckOrder() {
 
-       OrderSuccessfulPage.orderSuccessful.waitUntil(Condition.visible, 9000)
+       //OrderSuccessfulPage.orderSuccessful.wait(Condition.visible, 9000)
+       OrderSuccessfulPage.orderSuccessful.shouldHave(Condition.text('Your order is successfully completed!'))
+       //OrderSuccessfulPage.orderSuccessful.waitWhile(Condition.visible,60000)
 //        OrderSuccessfulPage Confirmation = page(OrderSuccessfulPage.class)
 //        Confirmation.OrderSuccessful().waitUntil(Condition.visible, 9000)
         //Confirmation.OrderSuccessful().shouldBe(Condition.visible).wait(60000)

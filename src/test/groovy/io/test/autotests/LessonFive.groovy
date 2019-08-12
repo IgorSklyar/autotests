@@ -1,7 +1,7 @@
 package io.test.autotests
 
 import com.codeborne.selenide.Condition
-import io.test.automation.lesson5.common.PageWaiter
+//import io.test.automation.lesson5.common.PageWaiter
 import io.test.automation.lesson5.steps.ProductPageSteps
 import io.test.automation.lesson5.steps.CartSteps
 import io.test.automation.lesson5.steps.InputDataSteps

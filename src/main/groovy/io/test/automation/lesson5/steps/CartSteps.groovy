@@ -35,10 +35,10 @@ class CartSteps {
 
     static void clickSubmit(){
         //Confirmation.OrderSuccessful().shouldBe(Condition.visible).wait(60000)
-       // ConfirmButtonElement.submitButton.click()
-        ConfirmButtonElement.submitButton.waitUntil(Condition.appear, 5000).click()
+        ConfirmButtonElement.submitButton.waitUntil(Condition.visible, 60000).click()
+       // ConfirmButtonElement.submitButton.waitUntil(Condition.appear, 9000).click()
     }
 //    static  void clickSavingChanges(){
-//        SavinChangesElements.saveChangesButton.click()
+//        SavingChangesElements.saveChangesButton.click()
 //    }
 }
