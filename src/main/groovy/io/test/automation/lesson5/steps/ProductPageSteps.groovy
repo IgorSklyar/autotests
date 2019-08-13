@@ -1,6 +1,5 @@
 package io.test.automation.lesson5.steps
 
-
 import org.openqa.selenium.By
 import static com.codeborne.selenide.Selenide.$
 

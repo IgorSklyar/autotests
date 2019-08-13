@@ -1,9 +1,9 @@
 package io.test.automation.lesson5.steps
 
 import com.codeborne.selenide.Condition
-import io.test.automation.lesson5.elements.ConfirmButtonElement
+import io.test.automation.lesson5.common.PageWaiter
 import  io.test.automation.lesson5.elements.CustomerData
-import io.test.automation.lesson5.elements.SavinChangesElements
+import io.test.automation.lesson5.elements.SavingChangesElements
 import org.openqa.selenium.support.FindBy
 
 
@@ -31,18 +31,10 @@ import org.openqa.selenium.support.FindBy
 
 }
 
-//
-//     void clickSubmit() {
-//         customerInfo.getSubmitButton().click()
-//     }
 
-//    static void clickSubmit() {
-//       CustomerData.submitButton.click()
-//    }
-
-     static  void clickSavingChanges(){
-         //SavinChangesElements.saveChangesButton.click()
-         SavinChangesElements.saveChangesButton.waitUntil(Condition.appear, 5000).click()
+     static  void clickSavingChanges() {
+         SavingChangesElements.saveChangesButton.waitUntil(Condition.appear, 5000).click()
+         PageWaiter.isJQueryReady()
      }
 }
 

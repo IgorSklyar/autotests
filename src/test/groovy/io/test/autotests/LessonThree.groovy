@@ -30,7 +30,6 @@ class LessonThree {
         foundRecords.each {
             def recordName = it.$(By.className("SegmentTitle__header"))
             def recordDuration = it.$(By.className("SearchSegment__duration"))
-
             println("$recordName.text : $recordDuration.text")
 
         }

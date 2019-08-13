@@ -3,19 +3,12 @@ package io.test.automation.lesson5.elements
 
 import com.codeborne.selenide.ElementsContainer
 import com.codeborne.selenide.SelenideElement
-import org.openqa.selenium.By
 import org.openqa.selenium.support.FindBy
-
-import static com.codeborne.selenide.Selenide.$
-
 
 class CustomerData extends ElementsContainer {
 
-
-
     @FindBy(xpath = "//input[@name=\'tax_id\']")
     private  SelenideElement TaxIdField
-
 
     @FindBy(xpath = "//input[@name='firstname']")
     private  SelenideElement FirstNameField
@@ -32,7 +25,6 @@ class CustomerData extends ElementsContainer {
     private  SelenideElement AddressField1
 
 
-
     @FindBy(xpath = "//input[@name='address2']")
     private  SelenideElement AddressField2
 
@@ -45,7 +37,6 @@ class CustomerData extends ElementsContainer {
     private  SelenideElement CityField
 
 
-
     @FindBy(xpath = "//input[@name='email']")
     private  SelenideElement EmailField
 
@@ -54,17 +45,13 @@ class CustomerData extends ElementsContainer {
     private  SelenideElement PhoneField
 
 
-
     @FindBy(xpath = "//button[@name='confirm_order']")
     private SelenideElement getSubmitButton
-
-
 
 
      void setTaxID(String TaxIdField) {
         this.TaxIdField.setValue(TaxIdField)
     }
-
 
 
     void setFirstName (String FirstNameField){
@@ -107,15 +94,5 @@ class CustomerData extends ElementsContainer {
      void setPhoneField(String PhoneField){
         this.PhoneField.setValue(PhoneField)
     }
-
-
-    static getSubmitButton(){
-        $(By.xpath('//button[@name=\'confirm_order\']'))
-    }
-//      SelenideElement getSubmitButton() {
-//        return getSubmitButton
-//
-//    }
-
 
 }

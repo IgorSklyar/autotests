@@ -4,7 +4,7 @@ import org.openqa.selenium.By
 import static com.codeborne.selenide.Selenide.$
 
 
-class SavinChangesElements {
+class SavingChangesElements {
 
     static getSaveChangesButton(){
 
