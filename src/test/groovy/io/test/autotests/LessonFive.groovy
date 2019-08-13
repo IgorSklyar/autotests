@@ -32,10 +32,8 @@ import static org.hamcrest.CoreMatchers.is
         inputDataSteps.clickSavingChanges()
         CartSteps.clickSubmit()
         OrderSuccessfulSteps.CheckOrder()
-        println('END')
 
     }
-
 }
 
 
