@@ -6,11 +6,6 @@ import static com.codeborne.selenide.Selenide.$
 class ButtonAddToCartElements {
 
      static getAddToCartButton(){
-
-        def FindButton = $(By.xpath('//button[@name=\'add_cart_product\']'))
-        return FindButton
-
-
+        $(By.xpath('//button[@name=\'add_cart_product\']'))
     }
-
 }

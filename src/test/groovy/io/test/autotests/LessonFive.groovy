@@ -1,8 +1,4 @@
 package io.test.autotests
-
-import com.codeborne.selenide.Condition
-import io.test.automation.lesson5.common.PageWaiter
-
 //import io.test.automation.lesson5.common.PageWaiter
 import io.test.automation.lesson5.steps.ProductPageSteps
 import io.test.automation.lesson5.steps.CartSteps
@@ -16,7 +12,7 @@ import static org.hamcrest.MatcherAssert.assertThat
 import static org.hamcrest.CoreMatchers.is
 
 
-   class LessonFive {
+class LessonFive {
 
     @Test
     void testStorePage() {
@@ -31,7 +27,7 @@ import static org.hamcrest.CoreMatchers.is
         inputDataSteps.setCustomerInfo("123455", "Tony", "Stark", "Stark Industry", "ул Ленина 25", "Гагарина 20", "101000", "Москва","stark@test.com","9991235479")
         inputDataSteps.clickSavingChanges()
         CartSteps.clickSubmit()
-        OrderSuccessfulSteps.CheckOrder()
+        OrderSuccessfulSteps.checkOrder()
 
     }
 }

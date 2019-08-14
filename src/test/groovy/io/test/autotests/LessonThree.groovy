@@ -18,15 +18,12 @@ class LessonThree {
         def toField = $('#to')
         def whenField = $('#when')
         def findButton = $('button.SearchForm__submit')
-
         fromField.value = "Великий Новгород"
         toField.value = "Москва"
         whenField.value = 'сегодня'
         findButton.click()
-
         def foundRecords = $$(".SearchMetaSegment > .SearchSegment_isVisible")
         foundRecords.shouldBe(CollectionCondition.sizeGreaterThan(0), 60000)
-
         foundRecords.each {
             def recordName = it.$(By.className("SegmentTitle__header"))
             def recordDuration = it.$(By.className("SearchSegment__duration"))
