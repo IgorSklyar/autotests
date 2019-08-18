@@ -1,12 +1,14 @@
 package io.test.automation.lesson5.common
 
+import com.codeborne.selenide.Condition
+import com.codeborne.selenide.SelenideElement
 import com.codeborne.selenide.WebDriverRunner
 import org.openqa.selenium.JavascriptExecutor
 import org.openqa.selenium.WebDriver
 import org.openqa.selenium.support.ui.WebDriverWait
 
 
-class PageWaiter {
+class WaitHelper {
     static boolean isJQueryReady() {
             new WebDriverWait(driver, 25).until({
                 try {
@@ -27,4 +29,10 @@ class PageWaiter {
     static <T> T executeJavaScript(String jsCode, Object... arguments) {
             return (T) ((JavascriptExecutor) driver).executeScript(jsCode, arguments)
         }
+
+    static void waitUntilDisplayed(SelenideElement element) {
+        element.waitUntil(Condition.visible, 60000)
+
+}
+
 }

@@ -36,9 +36,6 @@ class CustomerData extends ElementsContainer {
     @FindBy(xpath = "//input[@placeholder='+7']")
     private  SelenideElement PhoneField
 
-//    @FindBy(xpath = "//button[@name='confirm_order']")
-//    private SelenideElement getSubmitButton
-
     void setTaxID(String taxIdField) {
         this.taxIdField.setValue(taxIdField)
     }

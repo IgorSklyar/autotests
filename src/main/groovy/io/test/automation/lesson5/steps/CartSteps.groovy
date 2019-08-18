@@ -1,7 +1,7 @@
 package io.test.automation.lesson5.steps
 
 import com.codeborne.selenide.Condition
-import io.test.automation.lesson5.common.PageWaiter
+import io.test.automation.lesson5.common.WaitHelper
 import io.test.automation.lesson5.elements.ButtonAddToCartElements
 import io.test.automation.lesson5.elements.ConfirmButtonElement
 import io.test.automation.lesson5.pages.CartPage
@@ -25,7 +25,10 @@ class CartSteps {
         CartPage.cartItemsCounter.click()
     }
     static void clickSubmit(){
-        ConfirmButtonElement.submitButton.waitUntil(Condition.visible, 60000).click()
-        PageWaiter.isJQueryReady()
+       // ConfirmButtonElement.submitButton.waitUntil(Condition.visible, 60000).click()
+      //  ConfirmButtonElement.submitButton.WaitHelper.waitUntilDisplayed
+       WaitHelper.waitUntilDisplayed(ConfirmButtonElement.submitButton.click())
+        //ConfirmButtonElement.submitButton.click()
+         WaitHelper.isJQueryReady()
     }
 }

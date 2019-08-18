@@ -1,6 +1,6 @@
 package io.test.autotests
-//import io.test.automation.lesson5.common.PageWaiter
-import io.test.automation.lesson5.steps.ProductPageSteps
+
+import io.test.automation.lesson5.steps.RecordProductPriceSteps
 import io.test.automation.lesson5.steps.CartSteps
 import io.test.automation.lesson5.steps.InputDataSteps
 import io.test.automation.lesson5.steps.MainPageSteps
@@ -18,7 +18,7 @@ class LessonFive {
     void testStorePage() {
         MainPageSteps.openMainPage()
         SelectRandomProductSteps.RandomProduct()
-        ProductPageSteps.getProductPrice()
+        RecordProductPriceSteps.getProductPrice()
         CartSteps.addToCart()
         CartSteps.checkCartItemsCount('1')
         CartSteps.goToCart()
