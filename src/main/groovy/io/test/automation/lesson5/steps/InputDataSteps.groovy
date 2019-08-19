@@ -1,7 +1,7 @@
 package io.test.automation.lesson5.steps
 
 import com.codeborne.selenide.Condition
-import io.test.automation.lesson5.common.PageWaiter
+import io.test.automation.lesson5.common.WaitHelper
 import  io.test.automation.lesson5.elements.CustomerData
 import io.test.automation.lesson5.elements.SavingChangesElements
 import org.openqa.selenium.support.FindBy
@@ -26,7 +26,7 @@ class InputDataSteps {
 }
     static  void clickSavingChanges() {
          SavingChangesElements.saveChangesButton.shouldBe(Condition.enabled).click()
-         PageWaiter.isJQueryReady()
+         WaitHelper.isJQueryReady()
      }
 }
 
