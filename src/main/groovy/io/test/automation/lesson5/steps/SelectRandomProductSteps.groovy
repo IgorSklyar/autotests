@@ -7,7 +7,7 @@ import static com.codeborne.selenide.Selenide.$$
 
 class SelectRandomProductSteps {
 
-    static  void RandomProduct () {
+    static  void randomProduct() {
     List<WebElement> allProducts = $$(By.xpath("//div[@id='box-most-popular']//ul[@class='listing-wrapper products']"))
     Random rand = new Random()
     int randomProduct = rand.nextInt(allProducts.size())

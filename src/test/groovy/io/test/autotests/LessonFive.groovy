@@ -17,7 +17,7 @@ class LessonFive {
     @Test
     void testStorePage() {
         MainPageSteps.openMainPage()
-        SelectRandomProductSteps.RandomProduct()
+        SelectRandomProductSteps.randomProduct()
         ProductPageSteps.getProductPrice()
         CartSteps.addToCart()
         CartSteps.checkCartItemsCount('1')
