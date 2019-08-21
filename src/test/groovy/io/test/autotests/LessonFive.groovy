@@ -1,10 +1,10 @@
 package io.test.autotests
-//import io.test.automation.lesson5.common.PageWaiter
-import io.test.automation.lesson5.steps.ProductPageSteps
+
 import io.test.automation.lesson5.steps.CartSteps
 import io.test.automation.lesson5.steps.InputDataSteps
 import io.test.automation.lesson5.steps.MainPageSteps
 import io.test.automation.lesson5.steps.OrderSuccessfulSteps
+import io.test.automation.lesson5.steps.RecordProductPriceSteps
 import io.test.automation.lesson5.steps.SelectRandomProductSteps
 import org.junit.Test
 import static com.codeborne.selenide.Selenide.page
@@ -17,8 +17,8 @@ class LessonFive {
     @Test
     void testStorePage() {
         MainPageSteps.openMainPage()
-        SelectRandomProductSteps.RandomProduct()
-        ProductPageSteps.getProductPrice()
+        SelectRandomProductSteps.randomProduct()
+        RecordProductPriceSteps.getProductPrice()
         CartSteps.addToCart()
         CartSteps.checkCartItemsCount('1')
         CartSteps.goToCart()
@@ -28,7 +28,6 @@ class LessonFive {
         inputDataSteps.clickSavingChanges()
         CartSteps.clickSubmit()
         OrderSuccessfulSteps.checkOrder()
-
     }
 }
 

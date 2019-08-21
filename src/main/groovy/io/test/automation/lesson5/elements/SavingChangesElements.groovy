@@ -5,7 +5,7 @@ import static com.codeborne.selenide.Selenide.$
 
 class SavingChangesElements {
 
-    static getSaveChangesButton(){
+    static getSaveChangesButton() {
         $(By.cssSelector('.billing-address button'))
     }
 }
