@@ -1,6 +1,7 @@
 package io.test.automation.lesson5.steps
 
 import com.codeborne.selenide.Condition
+import io.qameta.allure.*
 import io.test.automation.lesson5.elements.CustomerDataElements
 import io.test.automation.lesson5.elements.SavingChangesElements
 import io.test.automation.lesson5.helpers.WaitHelper
@@ -11,6 +12,7 @@ class InputDataSteps {
     @FindBy(xpath = "//div[@class='billing-address']")
     private CustomerDataElements customerInfo
 
+    @Step ("Заполняем инфо о клиенте ")
     void setCustomerInfo(String taxIdField, String firstNameField, String lastNameField, String companyField, String addressField1, String addressField2, String postCodeField, String cityField, String emailField, String phoneField) {
         customerInfo.setTaxID(taxIdField)
         customerInfo.setFirstName(firstNameField)

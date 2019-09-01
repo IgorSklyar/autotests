@@ -1,5 +1,7 @@
 package io.test.autotests
 
+
+import io.qameta.allure.*
 import io.test.automation.lesson5.steps.CartSteps
 import io.test.automation.lesson5.steps.InputDataSteps
 import io.test.automation.lesson5.steps.MainPageSteps
@@ -11,10 +13,18 @@ import static com.codeborne.selenide.Selenide.page
 import static org.hamcrest.MatcherAssert.assertThat
 import static org.hamcrest.CoreMatchers.is
 
-
+@Epic("Тестовый эпик")
+@Feature("Тестовая фича")
+@Link("http://litecart.stqa.ru")
+@Issue("TICKET-1")
 class LessonFive {
 
     @Test
+    @Description("Пример теста")
+    @Severity(SeverityLevel.TRIVIAL)
+    @TmsLink("TC-1")
+    @Epic("Тестовый эпик")
+    @Story("покупка одного утенка")
     void testStorePage() {
         MainPageSteps.openMainPage()
         SelectRandomProductSteps.randomProduct()
