@@ -2,6 +2,7 @@ package io.test.autotests
 
 
 import io.qameta.allure.*
+import io.test.automation.lesson5.pages.ProductsPage
 import io.test.automation.lesson5.steps.CartSteps
 import io.test.automation.lesson5.steps.InputDataSteps
 import io.test.automation.lesson5.steps.MainPageSteps
@@ -28,7 +29,7 @@ class LessonFive {
     void testStorePage() {
         MainPageSteps.openMainPage()
         SelectRandomProductSteps.randomProduct()
-        RecordProductPriceSteps.getProductPrice()
+        System.out.println("Стоимость продукта равна " + RecordProductPriceSteps.getProductPrice())
         CartSteps.addToCart()
         CartSteps.checkCartItemsCount('1')
         CartSteps.goToCart()

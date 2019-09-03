@@ -12,7 +12,7 @@ class InputDataSteps {
     @FindBy(xpath = "//div[@class='billing-address']")
     private CustomerDataElements customerInfo
 
-    @Step ("Заполняем инфо о клиенте ")
+    @Step ("Заполняем инфо о клиенте: {1} {2} ")
     void setCustomerInfo(String taxIdField, String firstNameField, String lastNameField, String companyField, String addressField1, String addressField2, String postCodeField, String cityField, String emailField, String phoneField) {
         customerInfo.setTaxID(taxIdField)
         customerInfo.setFirstName(firstNameField)

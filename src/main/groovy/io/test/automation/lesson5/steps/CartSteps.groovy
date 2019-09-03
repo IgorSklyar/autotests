@@ -19,7 +19,7 @@ class CartSteps {
         CartPage.getUnitCostElement().getText()
     }
 
-    @Step ("Количесто товаров в коризине равно:  ")
+    @Step ("Количесто товаров в коризине равно: {0} ")
     static void checkCartItemsCount(String desiredCount) {
         CartPage.getCartItemsCounter().shouldHave(Condition.text(desiredCount))
     }

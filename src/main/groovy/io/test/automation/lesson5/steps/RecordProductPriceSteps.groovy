@@ -5,9 +5,10 @@ import io.test.automation.lesson5.pages.ProductsPage
 
 class RecordProductPriceSteps {
 
-    @Step("Получаем название и стоимость продукта ")
-    static void getProductPrice() {
-        System.out.println("The random product is " + ProductsPage.productName.getText() + " and it cost is " + ProductsPage.productPrice.getText() + ".")
+    @Step("Получаем стоимость продукта ")
+    @Attachment
+    static String getProductPrice() {
+        ProductsPage.productPrice.text
     }
 }
 
